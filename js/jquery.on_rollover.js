@@ -1,3 +1,11 @@
+/*!
+ * jQuery RollOver Plugin v1.0
+ * https://github.com/norichika/jquery.on_rollover
+ *
+ * Copyright 2012, Norichika Yamanaka
+ * Dual licensed under the MIT licenses.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
 (function(jQuery) {
 	$.fn.on_rollover = function(options) {
 
