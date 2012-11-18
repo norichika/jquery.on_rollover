@@ -6,7 +6,7 @@
  * Dual licensed under the MIT licenses.
  * http://www.opensource.org/licenses/mit-license.php
  */
-(function(jQuery) {
+(function($) {
 	$.fn.on_rollover = function(options) {
 
 		var opts = $.extend($.fn.on_rollover.defaults, options);
