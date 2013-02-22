@@ -47,7 +47,7 @@
 
 	$.fn.on_rollover.defaults = {
 		rollOverObj: ".imgro",
-		rollOverImg: "_f2",
+		rollOverImg: "_f2"
 	}
 
 })(jQuery)
