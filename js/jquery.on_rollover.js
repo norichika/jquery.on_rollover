@@ -57,6 +57,20 @@
 					}
 				});
 			});
+		},
+		// target set
+		revert: function (options) {
+			var opts = $.extend($.fn.on_rollover.defaults, options);
+			var _$target = $(opts.target);
+			console.log(_$target);
+			var src = _$target.attr('src');
+			var addName = opts.rollOverObj.substring(1);
+			if(src.indexOf(opts.rollOverImg) > -1) {
+				re = new RegExp("^(.*)" + opts.rollOverImg + ".(.*)$");
+				var src_off = src.replace(re, "$1.$2");
+				_$target.attr('src', src_off);
+			}
+				_$target.addClass(addName);
 		}
 	};
 
