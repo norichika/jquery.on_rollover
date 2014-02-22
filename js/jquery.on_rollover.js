@@ -62,7 +62,6 @@
 		revert: function (options) {
 			var opts = $.extend($.fn.on_rollover.defaults, options);
 			var _$target = $(opts.target);
-			console.log(_$target);
 			var src = _$target.attr('src');
 			var addName = opts.rollOverObj.substring(1);
 			if(src.indexOf(opts.rollOverImg) > -1) {
@@ -71,6 +70,18 @@
 				_$target.attr('src', src_off);
 			}
 				_$target.addClass(addName);
+		},
+		// target set
+		status: function (options) {
+			var opts = $.extend($.fn.on_rollover.defaults, options);
+			var _$target = $(opts.target);
+			var src = _$target.attr('src');
+			var removeName = opts.rollOverObj.substring(1);
+			if(src.indexOf(opts.rollOverImg) < 0) {
+				var src_on = src.replace(/^(.+)(\.[a-z]+)$/, "$1" + opts.rollOverImg + "$2");
+				_$target.attr('src', src_on);
+			}
+				_$target.removeClass(removeName);
 		}
 	};
 
