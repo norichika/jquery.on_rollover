@@ -10,7 +10,7 @@
 
 	var methods = {
 		init: function(options) {
-			var opts = $.extend($.fn.on_rollover.defaults, options);
+			var opts = $.extend({}, $.fn.on_rollover.defaults, options);
 			return this.each(function() {
 				var $this = $(this);
 
